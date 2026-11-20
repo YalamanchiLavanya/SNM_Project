@@ -1,3 +1,4 @@
+
 /* -------------------------
    Global Styles
 -------------------------- */
@@ -9,22 +10,22 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #8b5cf6;
-    --background: #f8fafc;
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary: #3b82f6;
+    --background: #f1f5f9;
     --surface: #ffffff;
     --text: #1e293b;
     --muted: #64748b;
-    --border: #e2e8f0;
-    --danger: #ef4444;
-    --success: #10b981;
-    --shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    --border: #dbeafe;
+    --danger: #dc2626;
+    --success: #15803d;
+    --shadow: 0 4px 15px rgba(30, 64, 175, 0.08);
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background);
+    background: var(--background);
     color: var(--text);
     line-height: 1.7;
     min-height: 100vh;
@@ -41,10 +42,10 @@ body {
 -------------------------- */
 
 .main-header {
-    background: linear-gradient(120deg, #312e81, #6366f1);
+    background: linear-gradient(120deg, #1e3a8a, #2563eb);
     color: white;
     padding: 18px 0;
-    box-shadow: 0 4px 15px rgba(49, 46, 129, 0.15);
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.15);
 }
 
 .navbar {
@@ -57,46 +58,26 @@ body {
 .logo {
     font-size: 26px;
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-.navbar nav {
+.navbar nav,
+.nav-links {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 22px;
 }
 
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-
-.navbar nav a:hover {
-    color: #c7d2fe;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
+.navbar nav a,
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
+.navbar nav a:hover,
 .nav-links a:hover {
-    color: #ddd;
+    color: #bfdbfe;
 }
 
 /* -------------------------
@@ -110,14 +91,13 @@ body {
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #ffffff);
+    background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
 }
 
 .hero h1 {
     font-size: clamp(32px, 5vw, 52px);
-    line-height: 1.2;
+    color: #1e3a8a;
     margin-bottom: 20px;
-    color: #312e81;
 }
 
 .hero p {
@@ -134,19 +114,19 @@ body {
 .btn {
     display: inline-block;
     padding: 11px 20px;
-    border-radius: 8px;
+    border-radius: 7px;
     border: none;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     margin: 5px;
-    transition: all 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(15, 23, 42, 0.12);
+    box-shadow: var(--shadow);
 }
 
 .btn-primary {
@@ -160,11 +140,7 @@ body {
 
 .btn-secondary {
     background: #e2e8f0;
-    color: #334155;
-}
-
-.btn-secondary:hover {
-    background: #cbd5e1;
+    color: #1e293b;
 }
 
 .btn-edit {
@@ -172,17 +148,9 @@ body {
     color: white;
 }
 
-.btn-edit:hover {
-    background: #d97706;
-}
-
 .btn-danger {
     background: var(--danger);
     color: white;
-}
-
-.btn-danger:hover {
-    background: #dc2626;
 }
 
 .full-width {
@@ -201,27 +169,21 @@ body {
 }
 
 .feature-card {
-    background: var(--surface);
+    background: white;
     padding: 30px;
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 35px rgba(99, 102, 241, 0.12);
+    transform: translateY(-5px);
 }
 
 .feature-card h3 {
+    color: var(--primary-dark);
     margin-bottom: 12px;
-    color: #4338ca;
-    font-size: 21px;
-}
-
-.feature-card p {
-    color: var(--muted);
 }
 
 /* -------------------------
@@ -232,17 +194,17 @@ body {
     max-width: 500px;
     width: 90%;
     margin: 60px auto;
-    background: var(--surface);
+    background: white;
     padding: 36px;
     border: 1px solid var(--border);
-    border-radius: 18px;
+    border-radius: 14px;
     box-shadow: var(--shadow);
 }
 
 .form-container h1 {
     text-align: center;
+    color: #1e3a8a;
     margin-bottom: 8px;
-    color: #312e81;
 }
 
 .form-subtitle {
@@ -267,24 +229,18 @@ body {
     width: 100%;
     padding: 13px 14px;
     border: 1px solid #cbd5e1;
-    border-radius: 9px;
+    border-radius: 7px;
     font-size: 15px;
     font-family: inherit;
-    background: #ffffff;
+    background: white;
     color: var(--text);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 110px;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .form-footer {
@@ -293,8 +249,18 @@ body {
     color: var(--muted);
 }
 
+.form-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
 /* -------------------------
-   Dashboard and Page Headers
+   Dashboard
 -------------------------- */
 
 .dashboard-header,
@@ -308,7 +274,7 @@ body {
 
 .dashboard-header h1,
 .page-header h1 {
-    color: #312e81;
+    color: #1e3a8a;
     font-size: 30px;
 }
 
@@ -324,27 +290,17 @@ body {
 }
 
 .stat-card {
-    background: linear-gradient(135deg, #ffffff, #eef2ff);
+    background: linear-gradient(135deg, white, #eff6ff);
     padding: 30px 24px;
-    border: 1px solid #e0e7ff;
-    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-4px);
 }
 
 .stat-card h3 {
     font-size: 38px;
     color: var(--primary);
-    margin-bottom: 5px;
-}
-
-.stat-card p {
-    color: var(--muted);
 }
 
 /* -------------------------
@@ -359,28 +315,21 @@ body {
 }
 
 .note-card {
-    background: var(--surface);
+    background: white;
     padding: 25px;
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow-wrap: anywhere;
 }
 
-.note-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
-}
-
 .note-card h3 {
+    color: var(--primary-dark);
     margin-bottom: 12px;
-    color: #4338ca;
 }
 
 .note-card p {
     color: var(--muted);
-    overflow-wrap: anywhere;
 }
 
 .note-actions {
@@ -391,27 +340,91 @@ body {
 }
 
 /* -------------------------
+   Profile
+-------------------------- */
+
+.profile-card {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.profile-card h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.profile-field {
+    margin-bottom: 20px;
+}
+
+.profile-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #475569;
+}
+
+.profile-field p {
+    padding: 12px;
+    background: #eff6ff;
+    border-radius: 6px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* -------------------------
+   Alerts
+-------------------------- */
+
+.alert {
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid;
+}
+
+.alert-success {
+    background: #ecfdf3;
+    color: #067647;
+    border-color: #abefc6;
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: #b42318;
+    border-color: #fecaca;
+}
+
+/* -------------------------
    Empty State
 -------------------------- */
 
 .empty-state {
-    background: var(--surface);
+    background: white;
     padding: 55px 25px;
     text-align: center;
     margin-top: 30px;
-    border: 1px dashed #c7d2fe;
-    border-radius: 16px;
+    border: 1px dashed #93c5fd;
+    border-radius: 12px;
 }
 
 .empty-state h2,
 .empty-state h3 {
-    color: #4338ca;
-    margin-bottom: 10px;
-}
-
-.empty-state p {
-    color: var(--muted);
-    margin-bottom: 20px;
+    color: var(--primary-dark);
 }
 
 /* -------------------------
@@ -420,12 +433,10 @@ body {
 
 .footer {
     margin-top: 60px;
-    background: #1e1b4b;
-    color: #e0e7ff;
+    background: #1e3a8a;
+    color: white;
     text-align: center;
     padding: 22px 15px;
-    position: sticky;
-    bottom: 0;
 }
 
 /* -------------------------
@@ -435,7 +446,7 @@ body {
 @media (max-width: 900px) {
     .features,
     .notes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -460,20 +471,10 @@ body {
     .page-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
-    }
-
-    .dashboard-header h1,
-    .page-header h1 {
-        font-size: 26px;
     }
 
     .hero {
         min-height: 360px;
-    }
-
-    .hero p {
-        font-size: 16px;
     }
 
     .form-container {
@@ -489,19 +490,6 @@ body {
 
     .logo {
         font-size: 23px;
-    }
-
-    .navbar nav a {
-        font-size: 14px;
-    }
-
-    .feature-card,
-    .note-card {
-        padding: 22px;
-    }
-
-    .stat-card h3 {
-        font-size: 32px;
     }
 
     .btn {

@@ -1,32 +1,25 @@
 {% extends "base.html" %}
-{% block title %}
-View Notes - SNS
-{% endblock %}
+
+{% block title %}View Note - SNS{% endblock %}
+
 {% block content %}
 
-<!-- {% block navmenu %}
-    <a href = "#">Files</a>
-    <a href = "{{url_for('mynotes')}}">Notes</a>
-    <a href = "{{url_for('profile')}}">Profile</a>
-    <a href = "{{url_for('logout')}}">Logout</a>
-{% endblock %} -->
+<div class="note-card">
+    <h1>{{ title }}</h1>
 
-<div class="form-container">
-    <h1>View Notes</h1>
-    <p class="form-subtitle">View New Notes for Your Reference</p>
-    <div class = "from-group">
-        <label for="Title">
-            Title
-        </label>
-        <p>{{title}}</p>
-     </div>
-     <div class = "from-group">
-        <label for="Title">
-            Content
-        </label>
-        <p>{{content}}</p>
-     </div>
-     <a href="{{url_for('mynotes')}}"><button>Back</button></a>
- </div>    
- {% endblock %}       
-        
+    <p>{{ content }}</p>
+
+    <div class="note-actions">
+        <a href="{{ url_for('edit_notes', note_id=notes['id']) }}"
+           class="btn btn-edit">
+            Edit
+        </a>
+
+        <a href="{{ url_for('mynotes') }}"
+           class="btn btn-secondary">
+            Back
+        </a>
+    </div>
+</div>
+
+{% endblock %}
